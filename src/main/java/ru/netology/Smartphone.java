@@ -6,9 +6,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Smartphone extends Product {
-    private String namePhone;
+    //  private String namePhone;
     private String produced;
-
 
 
     public Smartphone(int id, String name, int price, String produced) {

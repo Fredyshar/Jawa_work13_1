@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Book extends Product {
 
 
-    private String NameTheBook;
+//    private String NameTheBook;
     private String author;
 
     public Book(int id, String name, int price, String author) {

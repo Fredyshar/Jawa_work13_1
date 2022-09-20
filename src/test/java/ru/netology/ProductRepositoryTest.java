@@ -36,21 +36,25 @@ public class ProductRepositoryTest {
     }
 
     @Test
-    public void test() {
+    public void showAllproducts() {                                                 //показать все товары
         ProductRepository repo = new ProductRepository();
         repo.save(book1);
         repo.save(book2);
         repo.save(book3);
+        repo.save(phone1);
+        repo.save(phone2);
+        repo.save(phone3);
+        repo.save(phone4);
 
 
-        Product[] expected = {book1, book2, book3};
+        Product[] expected = {book1, book2, book3, phone1, phone2, phone3, phone4};
         Product[] actual = repo.getProducts();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
     @Test
-    public void test2() {
+    public void deleteAnExistingById() {                                                 //удалить по Id существующий товар
         ProductRepository repo = new ProductRepository();
         repo.save(book1);
         repo.save(book2);
@@ -65,4 +69,5 @@ public class ProductRepositoryTest {
 
 
     }
+
 }
