@@ -33,7 +33,7 @@ public class ProductManagerTest {
 
     @Test
 
-    public void test3() {
+    public void searchByExistingProductName() {                     //поиск по названию существующего  продукта
 
         Product[] expected = {phone1, phone4};
         Product[] actual = manager.searchBy("iPhone");
@@ -42,6 +42,20 @@ public class ProductManagerTest {
         System.out.println(Arrays.toString(actual));
 
     }
+
+    @Test
+
+    public void searchByNonExistingProductName() {                     //поиск по названию не существующего  продукта
+
+        Product[] expected = {};
+        Product[] actual = manager.searchBy("motorolla");
+
+         Assertions.assertArrayEquals(expected, actual);
+        System.out.println(Arrays.toString(actual));
+
+    }
+
+
 
 
 

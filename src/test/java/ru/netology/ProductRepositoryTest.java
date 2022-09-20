@@ -11,7 +11,7 @@ import java.util.Arrays;
 public class ProductRepositoryTest {
 
     ProductRepository repo = new ProductRepository();
-    ProductManager manager = new ProductManager(repo);
+ //   ProductManager manager = new ProductManager(repo);
 
 
     Product book1 = new Book(1, "Зеленая миля", 599, "Стивен Кинг");
@@ -24,33 +24,19 @@ public class ProductRepositoryTest {
     Product phone4 = new Smartphone(7, "iPhone", 50_000, "Apple");
 
 
-    @BeforeEach
-    public void setup() {
-        manager.add(book1);
-        manager.add(book2);
-        manager.add(book3);
-        manager.add(phone1);
-        manager.add(phone2);
-        manager.add(phone3);
-        manager.add(phone4);
-    }
+//    @BeforeEach
+//    public void setup() {
+//        manager.add(book1);
+//        manager.add(book2);
+//        manager.add(book3);
+//        manager.add(phone1);
+//        manager.add(phone2);
+//        manager.add(phone3);
+//        manager.add(phone4);
+//    }
 
     @Test
-    public void test() {
-        ProductRepository repo = new ProductRepository();
-        repo.save(book1);
-        repo.save(book2);
-        repo.save(book3);
-
-
-        Product[] expected = {book1, book2, book3};
-        Product[] actual = repo.getProducts();
-
-        Assertions.assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    public void test2() {
+    public void deleteAnExistingById() {                                                 //удалить по Id  товар
         ProductRepository repo = new ProductRepository();
         repo.save(book1);
         repo.save(book2);
@@ -65,4 +51,5 @@ public class ProductRepositoryTest {
 
 
     }
+
 }

@@ -16,7 +16,8 @@ public class ProductManager {
         Product[] result = new Product[0];
 
         for (Product product : repo.getProducts()) {
-            if (matches(product, text)) {
+//            if (matches(product, text)) {
+            if (product.matches(text)) {
 
                 Product[] tmp = new Product[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
@@ -36,14 +37,14 @@ public class ProductManager {
         return result;
     }
 
-
-    public boolean matches(Product product, String search) {
-        if (product.getName().contains(search)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+//
+//    public boolean matches(Product product, String search) {
+//        if (product.getName().contains(search)) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 
 
 }

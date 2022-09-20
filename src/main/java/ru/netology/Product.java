@@ -11,15 +11,13 @@ public class Product {
     protected int price;
 
 
-
-
     public Product(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-//    public int getId() {
+    //    public int getId() {
 //        return id;
 //    }
 //
@@ -42,6 +40,13 @@ public class Product {
 //    public void setPrice(int price) {
 //        this.price = price;
 //    }
-
+    public boolean matches(String Search) {
+        //       Product[] products = new Product[0];
+        if (getName().contains(Search)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
