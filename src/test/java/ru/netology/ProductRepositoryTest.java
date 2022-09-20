@@ -11,8 +11,7 @@ import java.util.Arrays;
 public class ProductRepositoryTest {
 
     ProductRepository repo = new ProductRepository();
- //   ProductManager manager = new ProductManager(repo);
-
+    //   ProductManager manager = new ProductManager(repo);
 
     Product book1 = new Book(1, "Зеленая миля", 599, "Стивен Кинг");
     Product book2 = new Book(2, "Фантазеры", 250, "Николай Носов");
@@ -22,7 +21,6 @@ public class ProductRepositoryTest {
     Product phone2 = new Smartphone(5, "Nokia", 10_000, "Nokia crp.");
     Product phone3 = new Smartphone(6, "Samsung", 50_000, "Android");
     Product phone4 = new Smartphone(7, "iPhone", 50_000, "Apple");
-
 
 //    @BeforeEach
 //    public void setup() {
@@ -48,8 +46,5 @@ public class ProductRepositoryTest {
         Product[] actual = repo.getProducts();
 
         Assertions.assertArrayEquals(expected, actual);
-
-
     }
-
 }
